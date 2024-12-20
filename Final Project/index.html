@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malou Pet Haven Shelter</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Malou Pet Haven Shelter</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#adoption">Adopt</a></li>
+                    <li><a href="#donation">Donate</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section class="home">
+            <div class="container">
+                <h2>Welcome to Malou Pet Haven Shelter</h2>
+                <p>Find your new best friend, support our cause, or join our mission today!</p>
+                <div class="cta-buttons">
+                    <a href="#adoption" class="btn">Adopt a Pet</a>
+                    <a href="#donation" class="btn">Make a Donation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pet Adoption Section -->
+<section id="adoption" class="adoption">
+    <div class="container">
+        <h2>Available Pets for Adoption</h2>
+
+        <!-- Filter Section - Inserted here -->
+        <div class="filter-options">
+            <label for="type">Type:</label>
+            <select id="type">
+                <option value="all">All</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+
+            <!-- Dog categories (hidden initially) -->
+            <label for="dog-type" class="hidden">Dog Category:</label>
+            <select id="dog-type" class="hidden">
+                <option value="all">All Dogs</option>
+                <option value="small-dog">Small Dogs</option>
+                <option value="medium-dog">Medium Dogs</option>
+                <option value="large-dog">Large Dogs</option>
+                <option value="puppy">Puppies</option>
+            </select>
+
+            <!-- Cat categories (hidden initially) -->
+            <label for="cat-type" class="hidden">Cat Category:</label>
+            <select id="cat-type" class="hidden">
+                <option value="all">All Cats</option>
+                <option value="short-hair-cat">Short-Haired Cats</option>
+                <option value="long-hair-cat">Long-Haired Cats</option>
+                <option value="kitten">Kittens</option>
+                <option value="senior-cat">Senior Cats</option>
+            </select>
+        </div>
+
+        <!-- Pet Grid Section - Where pets will be displayed -->
+        <div class="pet-grid" id="pet-grid">
+            <!-- Pets will be dynamically inserted here based on filter selections -->
+            <p>Check out our adorable pets available for adoption!</p>
+        </div>
+
+        <a href="adoption-form.html" class="btn" id="submit-adoption">Submit Adoption Application</a>
+    </div>
+</section>
+
+        <!-- Donation Section -->
+<section id="donation" class="donation">
+    <div class="container">
+        <h2>Support Our Shelter</h2>
+        <p>Your contributions help us care for the animals and find them loving homes.</p>
+        <form id="donation-form" action="donate.php" method="POST">
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+            <label for="frequency">Donation Frequency:</label>
+            <select id="frequency" name="frequency" required>
+                <option value="one-time">One-Time</option>
+                <option value="recurring">Recurring</option>
+            </select>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="paypal">PayPal</option>
+                <option value="credit-card">Credit Card</option>
+            </select>
+            <button type="submit" class="btn">Donate Now</button>
+        </form>
+    </div>
+</section>
+
+<!-- Events and Volunteer Section -->
+
+<section id="events" class="events">
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>
+                <h3>Pet Adoption Day</h3>
+                <p>Date: January 20, 2025 | Location: Main Shelter</p>
+                <a href="event-register.php?event=adoption-day" class="btn">Register</a>
+            </li>
+            <li>
+                <h3>Volunteer Orientation</h3>
+                <p>Date: February 15, 2025 | Location: Main Shelter</p>
+                <a href="event-register.php?event=orientation" class="btn">Register</a>
+            </li>
+        </ul>
+
+        <h2>Volunteer with Us</h2>
+        <p>Join our amazing team of volunteers!</p>
+        <form id="volunteer-form" action="volunteer-signup.php" method="POST">
+            <label for="volunteer-name">Name:</label>
+            <input type="text" id="volunteer-name" name="name" placeholder="Your Name" required>
+            <label for="volunteer-email">Email:</label>
+            <input type="email" id="volunteer-email" name="email" placeholder="Your Email" required>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+</section>
+
+<!-- Submit Adoption Application Button -->
+<section id="adoption" class="adoption">
+    <div class="container">
+        <h2>Submit Adoption Application</h2>
+        <p>If you're interested in adopting a pet, please fill out the form below, and our team will get back to you shortly!</p>
+        <form id="adoption-form">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="pet">Which pet are you interested in adopting?</label>
+            <select id="pet" name="pet" required>
+                <option value="">Select a pet</option>
+                <option value="german-shepherd">German Shepherd</option>
+                <option value="poodle">Poodle</option>
+                <option value="golden-retriever">Golden Retriever</option>
+                <option value="siberian-husky">Siberian Husky</option>
+                <option value="burmese-cat">Burmese Cat</option>
+                <option value="persian-cat">Persian Cat</option>
+                <option value="ragamuffin-cat">Ragamuffin Cat</option>
+                <option value="siamese-cat">Siamese Cat</option>
+            </select>
+            
+            <label for="message">Why do you want to adopt this pet?</label>
+            <textarea id="message" name="message" placeholder="Tell us why you would like to adopt" required></textarea>
+            
+            <button type="submit" class="btn">Submit Application</button>
+        </form>
+    </div>
+</section>
+
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Malou Pet Haven</h2>
+                <p>We are dedicated to rescuing and rehoming stray and abandoned animals.</p>
+                <p>Location: 123 Shelter Lane, Cityville | Operating Hours: 9 AM - 6 PM</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Malou Pet Haven Shelter. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
